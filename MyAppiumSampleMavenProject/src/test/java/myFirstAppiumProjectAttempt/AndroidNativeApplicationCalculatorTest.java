@@ -19,7 +19,7 @@ public class AndroidNativeApplicationCalculatorTest {
 	// adb shell "dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'" 
 	// This will show you Focused App in Your Emulator.
 	
-	// Some More CMD For Emulator
+	// Some More CMD For Emulator	
 	// emulator -list-avds
 	// emulator -avd @name-of-your-emulator
 	// ${ANDROID_SDK}/tools/emulator
@@ -48,7 +48,7 @@ public class AndroidNativeApplicationCalculatorTest {
 		dCap.setCapability("platformVersion", "7.1.1");
 		
 		
-		dCap.setCapability("appPackage", "com.android.calculator2");
+		dCap.setCapability("appPackage", "com.a	ndroid.calculator2");
 		dCap.setCapability("appActivity", "com.android.calculator2.Calculator");
 		dCap.setCapability("", "");
 		
@@ -79,7 +79,14 @@ public class AndroidNativeApplicationCalculatorTest {
 		System.out.println("Result Is : " +resultOutput);
 		System.out.println("Result Is : " +resultExtracted);
 		
+		//MobileElement showButton = appiumDriver.findElement(By.xpath("android.widget.Button[@resource-id=com.android.calculator2:id/op_add]"));
+		//System.out.println(showButton.getText());
+		
+		
+		
 		System.out.println("Test Completed...");
+		
+		appiumDriver.close();
 	}
 
 }
